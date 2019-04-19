@@ -1,0 +1,26 @@
+{
+  "name": "desafio-cubos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsmaelElias/desafio-cubos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsmaelElias/desafio-cubos/issues"
+  },
+  "homepage": "https://github.com/IsmaelElias/desafio-cubos#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "nodemon": "^1.18.11"
+  }
+}
