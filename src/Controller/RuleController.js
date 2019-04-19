@@ -12,11 +12,15 @@ class RuleController {
 
         let jsonRules = ReadJson()
 
-        jsonRules = AddRule(jsonRules, typeRule, day, interval)
+        try {
+            jsonRules = AddRule(jsonRules, typeRule, day, interval)   
+            
+            WriteJson(jsonRules)
 
-        WriteJson(jsonRules)
-
-        return res.json(ReadJson())
+            return res.json(ReadJson())
+        } catch (err) {
+            if(err) return res.status(500).send(err.message)
+        }
     }
 
     async delete (req, res) {
@@ -24,19 +28,31 @@ class RuleController {
 
         let jsonRules = ReadJson()
 
-        jsonRules = DeleteRule(jsonRules, ruleId)
+        try {
+            jsonRules = DeleteRule(jsonRules, ruleId)
 
-        WriteJson(jsonRules)
+            WriteJson(jsonRules)
 
-        return res.json(ReadJson())
+            return res.json(ReadJson())   
+        } catch (err) {
+            if(err) return res.status(500).send(err.message)
+        }
     }
 
     async listSchedule (req, res) {
         const { firstDay, lastDay } = req.body
 
-        let jsonRules = ReadJson()
+        if(!firstDay) return res.status(500).send("Você deve fornecer uma data de início");
 
-        return res.json(GenerateSchedule(jsonRules, firstDay, lastDay))
+        if(!lastDay) return res.status(500).send("Você deve fornecer uma data de término");
+
+        try {
+            let jsonRules = ReadJson()
+
+            return res.json(GenerateSchedule(jsonRules, firstDay, lastDay))
+        } catch (err) {
+            if(err) return res.status(500).send(err.message)
+        }
     }
 
     async reset (req, res) {
