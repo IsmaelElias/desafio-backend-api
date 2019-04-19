@@ -4,6 +4,8 @@ Link da Documentação no Postman: https://documenter.getpostman.com/view/182538
 
 Link da Collection no Postman: https://www.getpostman.com/collections/a4a8917b29a5f3f4cd7f
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a4a8917b29a5f3f4cd7f#?env%5BDesafio%20Backend%20da%20Cubos%5D=W3sia2V5IjoiYmFzZV91cmwiLCJ2YWx1ZSI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImRlc2NyaXB0aW9uIjoiIiwidHlwZSI6InRleHQiLCJlbmFibGVkIjp0cnVlfV0=)
+
 ## Instalação
 
 1. Clone o repositório.
