@@ -54,12 +54,6 @@ class RuleController {
             if(err) return res.status(500).send(err.message)
         }
     }
-
-    async reset (req, res) {
-        WriteJson(req.body)
-
-        return res.json(ReadJson())
-    }
 }
 
 module.exports = new RuleController();
